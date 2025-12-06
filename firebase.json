@@ -1,0 +1,48 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "flutter-chat-app-a36e9",
+          "appId": "1:316915061318:android:f8ece126db6c73c2acf047",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "flutter-chat-app-a36e9",
+          "configurations": {
+            "android": "1:316915061318:android:f8ece126db6c73c2acf047",
+            "ios": "1:316915061318:ios:508ca53f1799df79acf047",
+            "macos": "1:316915061318:ios:508ca53f1799df79acf047",
+            "web": "1:316915061318:web:36fe4718e40758cbacf047",
+            "windows": "1:316915061318:web:af1ce4be8507b959acf047"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "disallowLegacyRuntimeConfig": true,
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ],
+  "firestore": {
+    "database": "(default)",
+    "location": "nam5",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
